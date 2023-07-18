@@ -1,0 +1,29 @@
+package Browsers;
+
+//import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Firstscript {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("Webdriver.gecko.driver", "C:\\Users\\kavya\\Downloads\\geckodriver-v0.32.0-win32");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.hashtag-ca.com/careers/apply?jobCode=QAE001");
+		driver.findElement(By.name("name")).sendKeys("kavya");
+		driver.findElement(By.name("phone")).sendKeys("9876543210");
+		driver.findElement(By.name("email")).sendKeys("abc@gmail.com");
+		driver.findElement(By.name("description")).sendKeys("i am a software test engineer");
+		driver.findElement(By.name("resume")).click();
+		driver.findElement(By.className("\"btn-group form-btn join_us_career\"")).click();
+		
+		
+		
+
+	
+}}
